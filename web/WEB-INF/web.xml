@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <filter>
+        <filter-name>QQ</filter-name>
+        <filter-class>com.artistic.filter.AuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>QQ</filter-name>
+        <url-pattern>/regvis.jsp</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>Home</servlet-name>
+        <jsp-file>/index.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Home</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegisterArtist</servlet-name>
+        <jsp-file>/regart.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterArtist</servlet-name>
+        <url-pattern>/artist-registering</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegisterVisitor</servlet-name>
+        <jsp-file>/regvis.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterVisitor</servlet-name>
+        <url-pattern>/visitor-registering</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <jsp-file>/login.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/loginning</url-pattern>
+    </servlet-mapping>
+
+    
+</web-app>
